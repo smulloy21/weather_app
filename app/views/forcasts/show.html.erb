@@ -1,24 +1,36 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @forcast.address %>
-</p>
+<div class="row">
+  <div class="col-xs-8">
+    <h2>
+      <%= @forcast.address %>
+    </h2>
+    <br>
+    <p>
+      <strong>Wind Speed:</strong>
+      <%= @forcast.response["windSpeed"] %> mph
+    </p>
+    <p>
+      <strong>Temperature:</strong>
+      <%= @forcast.response['temperature'] %> <%= image_tag "degree.png", style:"width:25px;height:25px;margin-top:-3px;" %>
+    </p>
+    <p>
+      <strong>Humidity:</strong>
+      <%= @forcast.response['humidity'] %>
+    </p>
+  </div>
 
-<p>
-  <strong>Longitude:</strong>
-  <%= @forcast.longitude %>
-</p>
+  <div class="col-xs-4 text-center">
+  <p>
+    <%= image_tag (@forcast.response['icon'] + ".png") %>
+  </p>
+    <p>
+      <%= @forcast.response['summary'] %>
+    </p>
+  </div>
+</div>
 
-<p>
-  <strong>Latitude:</strong>
-  <%= @forcast.latitude %>
-</p>
-
-<p>
-  <strong>Response:</strong>
-  <%= @forcast.response %>
-</p>
-
-<%= link_to 'Edit', edit_forcast_path(@forcast) %> |
-<%= link_to 'Back', forcasts_path %>
+<div class="text-center">
+  <%= link_to 'Edit', edit_forcast_path(@forcast) %> |
+  <%= link_to 'Back', forcasts_path %>
+</div>

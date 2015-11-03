@@ -3,11 +3,28 @@
 
 body {
   font-family: 'Oxygen', sans-serif;
+  background-color: #bbd2fa;
 }
 
 td {
-  font-size: 1.5em; 
+  font-size: 1.5em;
 }
+
+a {
+  color: white;
+}
+
+tr:hover {
+  a {
+    color: black;
+  }
+}
+
+a:hover {
+  color: black;
+}
+
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

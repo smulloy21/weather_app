@@ -1,6 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Forcasts</h1>
+<h1>Today's Weather</h1>
+
+<%= link_to 'Add New City', new_forcast_path, id: "new_forcast_ajax", remote: true %>
 
 <table class="table table-hover">
   <thead>
@@ -29,5 +31,3 @@
 </table>
 
 <br>
-
-<%= link_to 'New Forcast', new_forcast_path, id: "new_forcast_ajax", remote: true %>
