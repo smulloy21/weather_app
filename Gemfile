@@ -13,6 +13,9 @@ gem "letter_opener"
 gem 'chartkick'
 gem 'devise'
 gem 'rest-client'
+gem 'geocoder'
+gem 'hirb'
+gem 'forecast_io'
 
 group :development do
   gem 'byebug'
@@ -31,14 +34,10 @@ end
 
 group :test do
   gem 'shoulda-matchers'
-  gem 'hirb'
   gem 'capybara'
   gem 'factory_girl_rails'
   gem 'simplecov', require: false
   gem 'poltergeist'
-  gem "vcr"
-  gem "webmock"
-
 
 end
 

@@ -38,4 +38,5 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+  ForecastIO.api_key = 'ed00e968cb78e2a4d28d0eb187720de5'
 end
