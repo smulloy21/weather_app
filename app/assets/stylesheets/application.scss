@@ -1,3 +1,13 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+  font-family: 'Oxygen', sans-serif;
+}
+
+td {
+  font-size: 1.5em; 
+}
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

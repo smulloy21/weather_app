@@ -13,20 +13,9 @@
 
   <div class="field">
     <%= f.label :address %><br>
-    <%= f.text_field :address %>
+    <%= f.text_field :address, placeholder: "City, State" %>
   </div>
-  <div class="field">
-    <%= f.label :longitude %><br>
-    <%= f.number_field :longitude %>
-  </div>
-  <div class="field">
-    <%= f.label :latitude %><br>
-    <%= f.number_field :latitude %>
-  </div>
-  <div class="field">
-    <%= f.label :response %><br>
-    <%= f.text_field :response %>
-  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

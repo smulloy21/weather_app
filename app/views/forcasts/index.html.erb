@@ -2,13 +2,13 @@
 
 <h1>Listing Forcasts</h1>
 
-<table>
+<table class="table table-hover">
   <thead>
     <tr>
       <th>Address</th>
-      <th>Longitude</th>
-      <th>Latitude</th>
-      <th>Response</th>
+      <th>Current Temperature</th>
+      <th>Icon</th>
+      <th>Summary</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,9 +17,9 @@
     <% @forcasts.each do |forcast| %>
       <tr>
         <td><%= forcast.address %></td>
-        <td><%= forcast.longitude %></td>
-        <td><%= forcast.latitude %></td>
-        <td><%= forcast.response %></td>
+        <td><%= forcast.response['temperature'] %> <%= image_tag "degree.png", style:"width:40px;height:40px;" %></td>
+        <td><%= image_tag (forcast.response['icon'] + ".png") %></td>
+        <td><%= forcast.response['summary'] %></td>
         <td><%= link_to 'Show', forcast %></td>
         <td><%= link_to 'Edit', edit_forcast_path(forcast) %></td>
         <td><%= link_to 'Destroy', forcast, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Forcast', new_forcast_path %>
+<%= link_to 'New Forcast', new_forcast_path, id: "new_forcast_ajax", remote: true %>
