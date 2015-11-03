@@ -5,6 +5,6 @@ class Forcast < ActiveRecord::Base
 
   private
   def get_forcast
-    self.response = ForecastIO.forecast(self.latitude, self.longitude)
+    self.response = ForecastIO.forecast(self.latitude, self.longitude).currently
   end
 end
