@@ -1,0 +1,33 @@
+<%= form_for(@forcast) do |f| %>
+  <% if @forcast.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@forcast.errors.count, "error") %> prohibited this forcast from being saved:</h2>
+
+      <ul>
+      <% @forcast.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :longitude %><br>
+    <%= f.number_field :longitude %>
+  </div>
+  <div class="field">
+    <%= f.label :latitude %><br>
+    <%= f.number_field :latitude %>
+  </div>
+  <div class="field">
+    <%= f.label :response %><br>
+    <%= f.text_field :response %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

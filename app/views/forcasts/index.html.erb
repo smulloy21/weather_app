@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Forcasts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Address</th>
+      <th>Longitude</th>
+      <th>Latitude</th>
+      <th>Response</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @forcasts.each do |forcast| %>
+      <tr>
+        <td><%= forcast.address %></td>
+        <td><%= forcast.longitude %></td>
+        <td><%= forcast.latitude %></td>
+        <td><%= forcast.response %></td>
+        <td><%= link_to 'Show', forcast %></td>
+        <td><%= link_to 'Edit', edit_forcast_path(forcast) %></td>
+        <td><%= link_to 'Destroy', forcast, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Forcast', new_forcast_path %>

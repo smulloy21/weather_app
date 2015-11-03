@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @forcast.address %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @forcast.longitude %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @forcast.latitude %>
+</p>
+
+<p>
+  <strong>Response:</strong>
+  <%= @forcast.response %>
+</p>
+
+<%= link_to 'Edit', edit_forcast_path(@forcast) %> |
+<%= link_to 'Back', forcasts_path %>
