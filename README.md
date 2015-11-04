@@ -9,7 +9,7 @@
 _Users:_
 * _Can add a city._
 * _See the weather in that city._
-* _See a list of cities they have added with their weather forecasts._
+* _See a list of cities they have added with their weather forecasts and Google Map._
 
 _View App:_ https://github.com/kendraash/health_tracker.git
 
