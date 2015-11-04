@@ -24,6 +24,8 @@ _View App:_ https://github.com/kendraash/health_tracker.git
 * _Shoulda-matchers_
 * _Forecast.io API_
 * _Geocoder_
+* _Google Maps JavaScript API_
+
 
 
 ## Database Setup/ Installation
