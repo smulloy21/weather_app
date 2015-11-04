@@ -1,0 +1,33 @@
+var latLng = {lat: <%= forcast.latitude %>, lng: <%= forcast.longitude %>}
+
+var contentString_<%=forcast.id %> =
+'<div id="content">'+
+  '<div id="siteNotice">'+
+    '</div>'+
+    '<h1 id="firstHeading" class="firstHeading"><%=
+forcast.address %></h1>'+
+    '<div id="bodyContent">'+
+      '<p>Link: <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+        '<%=
+    forcast.address %></a></p>'+
+        '</div>'+
+        '</div>';
+
+        var myMarker_<%=
+    forcast.id %>  = new google.maps.Marker({
+          position: latLng,
+          map: map,
+        });
+
+        var infoWindow_<%=
+    forcast.id %> = new google.maps.InfoWindow({
+          content: contentString_<%=
+      forcast.id %>
+        });
+
+        myMarker_<%=
+    forcast.id %>.addListener('click', function() {
+          infoWindow_<%=
+      forcast.id %>.open(map, myMarker_<%=
+      forcast.id %>);
+        });

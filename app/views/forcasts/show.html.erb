@@ -30,6 +30,136 @@
   </div>
 </div>
 
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvplgHKiUuaXfvw0fLv92QFZC69iRqC3Y&callback=initMap" type="text/javascript">
+
+</script>
+
+
+<%= javascript_tag do %>
+  function initMap() {
+    var mapStyle = [{
+      "featureType": "administrative",
+      "elementType": "all",
+      "stylers": [
+      {
+        "visibility": "on"
+      },
+      {
+        "saturation": -100
+      },
+      {
+        "lightness": 20
+      }
+      ]
+    },
+    {
+      "featureType": "road",
+      "elementType": "all",
+      "stylers": [
+      {
+        "visibility": "on"
+      },
+      {
+        "saturation": -100
+      },
+      {
+        "lightness": 40
+      }
+      ]
+    },
+    {
+      "featureType": "water",
+      "elementType": "all",
+      "stylers": [
+      {
+        "visibility": "on"
+      },
+      {
+        "saturation": -10
+      },
+      {
+        "lightness": 30
+      }
+      ]
+    },
+    {
+      "featureType": "landscape.man_made",
+      "elementType": "all",
+      "stylers": [
+      {
+        "visibility": "simplified"
+      },
+      {
+        "saturation": -60
+      },
+      {
+        "lightness": 10
+      }
+      ]
+    },
+    {
+      "featureType": "landscape.natural",
+      "elementType": "all",
+      "stylers": [
+      {
+        "visibility": "simplified"
+      },
+      {
+        "saturation": -60
+      },
+      {
+        "lightness": 60
+      }
+      ]
+    },
+    {
+      "featureType": "poi",
+      "elementType": "all",
+      "stylers": [
+      {
+        "visibility": "off"
+      },
+      {
+        "saturation": -100
+      },
+      {
+        "lightness": 60
+      }
+      ]
+    },
+    {
+      "featureType": "transit",
+      "elementType": "all",
+      "stylers": [
+      {
+        "visibility": "off"
+      },
+      {
+        "saturation": -100
+      },
+      {
+        "lightness": 60
+      }
+      ]
+    }];
+    var LatLng = {lat: <%= @forcast.latitude %>, lng:  <%= @forcast.longitude %>};
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+
+      zoom: 13,
+      center: LatLng,
+      styles: mapStyle
+    });
+    <%= render 'forcast', forcast: @forcast %>
+  }
+<% end %>
+<center>
+<div id="map"></div>
+
+</div>
+</center>
+<br>
 <div class="text-center">
   <%= link_to 'Edit', edit_forcast_path(@forcast) %> |
   <%= link_to 'Back', forcasts_path %>
