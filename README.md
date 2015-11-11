@@ -1,6 +1,6 @@
 # _Weather App_
 
-##### A place to track the weather.
+##### An app to fetch current weather data.
 
 #### By _**Lindsay Culver, Shannon Mulloy and Kendra Ash**_
 
@@ -8,39 +8,25 @@
 
 _Users:_
 * _Can add a city._
-* _See the weather in that city._
+* _See the current weather in that city._
 * _See a list of cities they have added with their weather forecasts and Google Map._
 
-_View App:_ https://github.com/kendraash/health_tracker.git
+_View App:_ https://weather-app-on-rails.herokuapp.com/
 
 ## Technology Used
-* _Ruby_
+
 * _Rails_
-* _RSpec_
-* _Capybara_
-* _Postgres_
-* _Rake_
-* _Active Record_
-* _Shoulda-matchers_
 * _Forecast.io API_
 * _Geocoder_
 * _Google Maps JavaScript API_
 
-
-
 ## Database Setup/ Installation
 
-_In rake:_<br>
-_db:setup, (The seeded data will be loaded with db:setup.)_<br>
-_all database tables listed in schema.rb_
-<br>
-
-_Webserver testing:_
-* _Install required gems_
-* _$ bundle install_
-* _rake db:test:prepare_
-* _$ rails server_
-* _Navigate to localhost:3000_
+* _Clone repo_
+* _Run 'bundle'_
+* _Run 'rake db:setup'_
+* _Run 'rails s'_
+* _Open localhost:3000 in browser_
 
 ### Legal
 
